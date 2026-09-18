@@ -1,0 +1,1 @@
+Sadguru Shop website with product photos. Keep index.html and the images folder together. On GitHub, upload all files/folders to the repository root, then enable Pages from Settings > Pages > Deploy from branch > main > /(root).
