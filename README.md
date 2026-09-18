@@ -1,21 +1,18 @@
-# sadguru-shop-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sadguru Shop | Jewellery, Beauty & Home Accessories</title>
+<meta name="description" content="Sadguru Shop - Jewellery, Earrings, Bracelets, Bangles, Facewash and Beauty Products">
 
-<meta name="description"
-content="Sadguru Shop - Jewellery, Earrings, Bracelets, Bangles, Cutlery Sets, Face Wash and more.">
+<title>Sadguru Shop | Jewellery & Beauty Collection</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
 }
 
 html{
@@ -23,183 +20,204 @@ html{
 }
 
 body{
-    background:#fffaf7;
-    color:#29201d;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#fffaf3;
+    color:#251b16;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
 /* HEADER */
 header{
-    background:linear-gradient(135deg,#5a1830,#8d3151);
-    color:white;
-    padding:15px 6%;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.15);
+    background:#19110d;
+    box-shadow:0 4px 20px rgba(0,0,0,.25);
 }
 
 .navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:20px;
+    align-items:center;
 }
 
 .logo{
-    font-size:27px;
+    font-family:Georgia,serif;
+    font-size:29px;
     font-weight:bold;
+    color:#e9b94e;
 }
 
-.logo span{
-    color:#ffd88a;
-}
-
-nav{
+.nav-links{
     display:flex;
-    gap:20px;
-}
-
-nav a{
+    gap:25px;
     color:white;
-    text-decoration:none;
-    font-weight:bold;
 }
 
-nav a:hover{
-    color:#ffd88a;
+.nav-links a{
+    font-size:15px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#e9b94e;
+}
+
+.menu{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
 }
 
 /* HERO */
 .hero{
-    min-height:500px;
-    padding:70px 7%;
+    min-height:620px;
     display:flex;
     align-items:center;
-    justify-content:center;
-    text-align:center;
     background:
-    linear-gradient(rgba(60,10,30,.72),rgba(60,10,30,.72)),
-    url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1600&q=80")
-    center/cover;
-    color:white;
+    linear-gradient(rgba(25,17,13,.72),rgba(25,17,13,.72)),
+    url("images/product-1.jpg") center/cover no-repeat;
 }
 
 .hero-content{
-    max-width:750px;
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:70px 20px;
+    color:white;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid #e9b94e;
+    border-radius:30px;
+    color:#e9b94e;
+    font-size:13px;
+    letter-spacing:2px;
 }
 
 .hero h1{
-    font-size:55px;
-    margin-bottom:15px;
-}
-
-.hero h1 span{
-    color:#ffd88a;
+    font-family:Georgia,serif;
+    font-size:clamp(48px,8vw,82px);
+    line-height:1;
+    margin:20px 0;
 }
 
 .hero p{
-    font-size:20px;
-    line-height:1.6;
-    margin-bottom:30px;
+    max-width:600px;
+    font-size:18px;
+    color:#f6eee7;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
 .btn{
     display:inline-block;
-    padding:13px 25px;
-    background:#ffd88a;
-    color:#4d1729;
-    text-decoration:none;
+    padding:13px 22px;
     border-radius:30px;
     font-weight:bold;
-    margin:5px;
-    border:none;
-    cursor:pointer;
 }
 
-.btn:hover{
-    transform:translateY(-2px);
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
+.gold-btn{
+    background:#d29b2f;
+    color:#18110d;
 }
 
-/* SECTION */
-section{
-    padding:60px 6%;
+.dark-btn{
+    border:1px solid #d29b2f;
+    color:white;
 }
 
-.section-title{
+/* COMMON SECTION */
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:75px 20px;
+}
+
+.title{
     text-align:center;
-    margin-bottom:35px;
+    margin-bottom:40px;
 }
 
-.section-title h2{
-    color:#671c38;
-    font-size:34px;
-    margin-bottom:8px;
+.title span{
+    color:#c58d25;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:2px;
 }
 
-.section-title p{
-    color:#777;
+.title h2{
+    font-family:Georgia,serif;
+    font-size:42px;
+    margin:5px 0;
+}
+
+.title p{
+    color:#766b63;
+    max-width:700px;
+    margin:auto;
 }
 
 /* CATEGORIES */
 .categories{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-    gap:18px;
+    grid-template-columns:repeat(5,1fr);
+    gap:15px;
 }
 
 .category{
     background:white;
-    padding:25px 12px;
+    border:1px solid #eadccf;
+    border-radius:18px;
+    padding:25px 15px;
     text-align:center;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
     cursor:pointer;
     transition:.3s;
 }
 
 .category:hover{
-    transform:translateY(-6px);
-    background:#fff2e6;
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.1);
 }
 
-.category .icon{
+.category-icon{
     font-size:40px;
-    margin-bottom:10px;
 }
 
 .category h3{
-    font-size:16px;
-}
-
-/* SEARCH */
-.search-box{
-    max-width:600px;
-    margin:0 auto 30px;
-    display:flex;
-}
-
-.search-box input{
-    width:100%;
-    padding:15px 20px;
-    border:1px solid #ddd;
-    border-radius:30px;
-    outline:none;
-    font-size:16px;
+    margin-top:8px;
+    font-size:17px;
 }
 
 /* PRODUCTS */
 .products{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
 }
 
 .product{
     background:white;
-    border-radius:16px;
+    border:1px solid #eadccf;
+    border-radius:18px;
     overflow:hidden;
-    box-shadow:0 4px 18px rgba(0,0,0,.09);
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
     transition:.3s;
 }
 
@@ -209,189 +227,239 @@ section{
 
 .product img{
     width:100%;
-    height:210px;
+    height:270px;
     object-fit:cover;
+    display:block;
 }
 
 .product-info{
-    padding:18px;
+    padding:17px;
 }
 
 .product-info h3{
-    color:#53172e;
-    margin-bottom:8px;
-}
-
-.category-name{
-    font-size:13px;
-    color:#888;
-    margin-bottom:8px;
-}
-
-.price{
+    font-family:Georgia,serif;
     font-size:20px;
-    font-weight:bold;
-    color:#9a3c4f;
-    margin:10px 0;
 }
 
-.order-btn{
-    display:block;
+.product-info p{
+    color:#776b63;
+    font-size:14px;
+    margin:5px 0 14px;
+}
+
+.product-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.product-btn{
+    flex:1;
     text-align:center;
-    background:#25D366;
-    color:white;
-    padding:11px;
+    padding:9px;
     border-radius:25px;
-    text-decoration:none;
+    background:#fff4df;
+    border:1px solid #e8cf9d;
+    font-size:13px;
     font-weight:bold;
+}
+
+.whatsapp{
+    background:#e8f8ed;
+    border-color:#b7dfc0;
 }
 
 /* ABOUT */
 .about{
-    background:#f8eee8;
+    background:#201510;
+    color:white;
 }
 
-.about-box{
-    max-width:900px;
+.about-inner{
+    max-width:1200px;
     margin:auto;
-    text-align:center;
-    line-height:1.8;
+    padding:70px 20px;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about h2{
+    font-family:Georgia,serif;
+    color:#e9b94e;
+    font-size:45px;
+    margin:15px 0;
+}
+
+.about p{
+    color:#eadfd8;
     font-size:17px;
 }
 
-/* FEATURES */
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-}
-
-.feature{
+.info-box{
     background:white;
+    color:#251b16;
+    border-radius:20px;
     padding:25px;
-    text-align:center;
-    border-radius:15px;
-    box-shadow:0 3px 12px rgba(0,0,0,.07);
 }
 
-.feature-icon{
-    font-size:35px;
-    margin-bottom:10px;
+.info-row{
+    padding:13px 0;
+    border-bottom:1px solid #eee;
+}
+
+.info-row:last-child{
+    border-bottom:0;
 }
 
 /* CONTACT */
 .contact{
-    background:#fff;
+    background:white;
 }
 
-.contact-box{
-    max-width:700px;
-    margin:auto;
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.contact-card{
     text-align:center;
+    padding:28px 20px;
+    border:1px solid #eadccf;
+    border-radius:18px;
 }
 
-.contact-item{
-    margin:15px;
-    font-size:18px;
+.contact-icon{
+    font-size:38px;
 }
 
-.contact-item a{
-    color:#7c2342;
-    text-decoration:none;
-    font-weight:bold;
+.contact-card h3{
+    margin:8px 0;
+}
+
+.contact-card p{
+    color:#766b63;
 }
 
 /* FOOTER */
 footer{
-    background:#3e1325;
-    color:white;
+    background:#120c09;
+    color:#ddd;
     text-align:center;
-    padding:30px 15px;
+    padding:25px 15px;
 }
 
-footer h2{
-    color:#ffd88a;
-    margin-bottom:10px;
-}
-
-.social{
-    margin:15px 0;
-}
-
-.social a{
-    color:white;
-    text-decoration:none;
-    margin:0 8px;
-}
-
-/* WHATSAPP FLOAT */
-.whatsapp{
+/* FLOATING BUTTONS */
+.floating{
     position:fixed;
-    right:20px;
-    bottom:20px;
-    width:58px;
-    height:58px;
-    background:#25D366;
-    color:white;
-    border-radius:50%;
+    right:18px;
+    bottom:18px;
     display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:30px;
-    text-decoration:none;
-    box-shadow:0 4px 15px rgba(0,0,0,.25);
-    z-index:2000;
+    flex-direction:column;
+    gap:10px;
+    z-index:999;
+}
+
+.float-btn{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    color:white;
+    font-size:23px;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+.float-wa{
+    background:#25d366;
+}
+
+.float-call{
+    background:#c9952e;
 }
 
 /* MOBILE */
-@media(max-width:700px){
+@media(max-width:950px){
 
-    header{
-        padding:13px 4%;
+    .products{
+        grid-template-columns:repeat(3,1fr);
     }
+
+    .categories{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:650px){
 
     .navbar{
+        padding:13px 15px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:60px;
+        left:0;
+        right:0;
+        background:#19110d;
         flex-direction:column;
+        padding:20px;
+        gap:18px;
     }
 
-    nav{
-        gap:12px;
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    nav a{
-        font-size:14px;
+    .nav-links.show{
+        display:flex;
     }
 
     .hero{
-        min-height:450px;
-        padding:50px 5%;
+        min-height:540px;
+    }
+
+    .hero-content{
+        padding:50px 20px;
     }
 
     .hero h1{
-        font-size:40px;
+        font-size:52px;
     }
 
     .hero p{
-        font-size:17px;
+        font-size:16px;
     }
 
-    section{
-        padding:45px 5%;
+    .section{
+        padding:55px 15px;
     }
 
-    .section-title h2{
-        font-size:28px;
+    .title h2{
+        font-size:34px;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .products{
         grid-template-columns:repeat(2,1fr);
-        gap:13px;
+        gap:12px;
     }
 
     .product img{
-        height:160px;
+        height:210px;
     }
 
     .product-info{
@@ -399,11 +467,27 @@ footer h2{
     }
 
     .product-info h3{
-        font-size:15px;
+        font-size:17px;
     }
 
-    .price{
-        font-size:17px;
+    .product-info p{
+        font-size:12px;
+    }
+
+    .product-buttons{
+        flex-direction:column;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about h2{
+        font-size:36px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
     }
 }
 </style>
@@ -413,21 +497,21 @@ footer h2{
 
 <!-- HEADER -->
 <header>
-<div class="navbar">
+<nav class="navbar">
 
-<div class="logo">
-Sadguru <span>Shop</span>
-</div>
+<a href="#home" class="logo">Sadguru Shop</a>
 
-<nav>
+<div class="menu" onclick="openMenu()">☰</div>
+
+<div class="nav-links" id="navLinks">
 <a href="#home">Home</a>
 <a href="#categories">Categories</a>
 <a href="#products">Products</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
-</nav>
-
 </div>
+
+</nav>
 </header>
 
 
@@ -436,17 +520,30 @@ Sadguru <span>Shop</span>
 
 <div class="hero-content">
 
-<h1>Welcome to <span>Sadguru Shop</span></h1>
+<span class="badge">
+STYLE • BEAUTY • COLLECTION
+</span>
+
+<h1>Sadguru Shop</h1>
 
 <p>
-Discover beautiful jewellery, trendy accessories,
-useful cutlery sets, beauty products and much more —
-all at great prices.
+Discover beautiful jewellery, earrings, bracelets, bangles,
+facewash and beauty products — all in one place.
 </p>
 
-<a href="#products" class="btn">Shop Now</a>
+<div class="buttons">
 
-<a href="#contact" class="btn">Contact Us</a>
+<a href="#products" class="btn gold-btn">
+View Collection
+</a>
+
+<a href="https://wa.me/919667486365"
+target="_blank"
+class="btn dark-btn">
+WhatsApp Us
+</a>
+
+</div>
 
 </div>
 
@@ -454,43 +551,46 @@ all at great prices.
 
 
 <!-- CATEGORIES -->
-<section id="categories">
+<section class="section" id="categories">
 
-<div class="section-title">
-<h2>Shop By Category</h2>
-<p>Choose your favourite category</p>
+<div class="title">
+
+<span>OUR COLLECTION</span>
+
+<h2>Shop by Category</h2>
+
+<p>
+Explore our jewellery, fashion accessories and beauty collection.
+</p>
+
 </div>
+
 
 <div class="categories">
 
-<div class="category" onclick="filterProducts('Cutlery')">
-<div class="icon">🍽️</div>
-<h3>Cutlery Sets</h3>
-</div>
-
 <div class="category" onclick="filterProducts('Jewellery')">
-<div class="icon">💎</div>
+<div class="category-icon">💎</div>
 <h3>Jewellery</h3>
 </div>
 
 <div class="category" onclick="filterProducts('Earrings')">
-<div class="icon">👂</div>
+<div class="category-icon">✨</div>
 <h3>Earrings</h3>
 </div>
 
-<div class="category" onclick="filterProducts('Bracelet')">
-<div class="icon">✨</div>
+<div class="category" onclick="filterProducts('Bracelets')">
+<div class="category-icon">📿</div>
 <h3>Bracelets</h3>
 </div>
 
 <div class="category" onclick="filterProducts('Bangles')">
-<div class="icon">💫</div>
+<div class="category-icon">⭕</div>
 <h3>Bangles</h3>
 </div>
 
 <div class="category" onclick="filterProducts('Beauty')">
-<div class="icon">🧴</div>
-<h3>Beauty</h3>
+<div class="category-icon">🧴</div>
+<h3>Facewash & Beauty</h3>
 </div>
 
 </div>
@@ -499,261 +599,363 @@ all at great prices.
 
 
 <!-- PRODUCTS -->
-<section id="products">
+<section class="section" id="products">
 
-<div class="section-title">
-<h2>Our Products</h2>
-<p>Explore our latest collection</p>
+<div class="title">
+
+<span>FEATURED PRODUCTS</span>
+
+<h2>Our Collection</h2>
+
+<p>
+For price, colour, size and availability, contact Sadguru Shop.
+</p>
+
 </div>
 
-<div class="search-box">
-<input
-type="text"
-id="searchInput"
-placeholder="🔍 Search products..."
-onkeyup="searchProducts()">
-</div>
 
-
-<div class="products" id="productList">
+<div class="products" id="productGrid">
 
 
 <!-- PRODUCT 1 -->
-<div class="product" data-name="cutlery set" data-category="Cutlery">
 
-<img src="https://images.unsplash.com/photo-1584302179602-e4c3d3fd629d?auto=format&fit=crop&w=700&q=80">
+<div class="product" data-category="Jewellery">
+
+<img src="images/product-1.jpg"
+alt="Traditional Jewellery Set">
 
 <div class="product-info">
 
-<div class="category-name">Cutlery</div>
+<h3>Traditional Jewellery Set</h3>
 
-<h3>Premium Cutlery Set</h3>
+<p>
+Beautiful necklace set with matching earrings.
+</p>
 
-<p>Beautiful and useful kitchen cutlery set.</p>
+<div class="product-buttons">
 
-<div class="price">₹499</div>
-
-<a class="order-btn"
-href="https://wa.me/919999999999?text=Hello%20Sadguru%20Shop,%20I%20want%20to%20order%20Premium%20Cutlery%20Set."
+<a class="product-btn whatsapp"
+href="https://wa.me/919667486365?text=Hello%20Sadguru%20Shop%2C%20I%20want%20to%20know%20about%20the%20Traditional%20Jewellery%20Set."
 target="_blank">
-Order on WhatsApp
+WhatsApp
 </a>
+
+<a class="product-btn"
+href="tel:9767486365">
+Call
+</a>
+
+</div>
 
 </div>
 </div>
 
 
 <!-- PRODUCT 2 -->
-<div class="product" data-name="jewellery set" data-category="Jewellery">
 
-<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80">
+<div class="product" data-category="Bangles">
+
+<img src="images/product-2.jpg"
+alt="Gold Bangles">
 
 <div class="product-info">
 
-<div class="category-name">Jewellery</div>
+<h3>Classic Gold Bangles</h3>
 
-<h3>Elegant Jewellery Set</h3>
+<p>
+Elegant bangles for everyday styling.
+</p>
 
-<p>Stylish jewellery for special occasions.</p>
+<div class="product-buttons">
 
-<div class="price">₹699</div>
-
-<a class="order-btn"
-href="https://wa.me/919999999999?text=Hello%20Sadguru%20Shop,%20I%20want%20to%20order%20Elegant%20Jewellery%20Set."
+<a class="product-btn whatsapp"
+href="https://wa.me/919667486365"
 target="_blank">
-Order on WhatsApp
+WhatsApp
 </a>
+
+<a class="product-btn"
+href="tel:9767486365">
+Call
+</a>
+
+</div>
 
 </div>
 </div>
 
 
 <!-- PRODUCT 3 -->
-<div class="product" data-name="earrings" data-category="Earrings">
 
-<img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80">
+<div class="product" data-category="Bangles">
+
+<img src="images/product-3.jpg"
+alt="Gold Bangle Set">
 
 <div class="product-info">
 
-<div class="category-name">Earrings</div>
+<h3>Gold Bangle Set</h3>
 
-<h3>Fashion Earrings</h3>
+<p>
+Stylish bangle collection with polished finish.
+</p>
 
-<p>Trendy earrings for everyday style.</p>
+<div class="product-buttons">
 
-<div class="price">₹199</div>
-
-<a class="order-btn"
-href="https://wa.me/919999999999?text=Hello%20Sadguru%20Shop,%20I%20want%20to%20order%20Fashion%20Earrings."
+<a class="product-btn whatsapp"
+href="https://wa.me/919667486365"
 target="_blank">
-Order on WhatsApp
+WhatsApp
 </a>
+
+<a class="product-btn"
+href="tel:9767486365">
+Call
+</a>
+
+</div>
 
 </div>
 </div>
 
 
 <!-- PRODUCT 4 -->
-<div class="product" data-name="bracelet" data-category="Bracelet">
 
-<img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=700&q=80">
+<div class="product" data-category="Bracelets">
+
+<img src="images/product-4.jpg"
+alt="Designer Bracelets">
 
 <div class="product-info">
 
-<div class="category-name">Bracelet</div>
+<h3>Designer Bracelets</h3>
 
-<h3>Designer Bracelet</h3>
+<p>
+Fancy stone-studded bracelet designs.
+</p>
 
-<p>Beautiful bracelet with premium look.</p>
+<div class="product-buttons">
 
-<div class="price">₹249</div>
-
-<a class="order-btn"
-href="https://wa.me/919999999999?text=Hello%20Sadguru%20Shop,%20I%20want%20to%20order%20Designer%20Bracelet."
+<a class="product-btn whatsapp"
+href="https://wa.me/919667486365"
 target="_blank">
-Order on WhatsApp
+WhatsApp
 </a>
+
+<a class="product-btn"
+href="tel:9767486365">
+Call
+</a>
+
+</div>
 
 </div>
 </div>
 
 
 <!-- PRODUCT 5 -->
-<div class="product" data-name="bangles" data-category="Bangles">
 
-<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=700&q=80">
+<div class="product" data-category="Jewellery">
+
+<img src="images/product-5.jpg"
+alt="Butterfly Necklace">
 
 <div class="product-info">
 
-<div class="category-name">Bangles</div>
+<h3>Butterfly Necklace</h3>
 
-<h3>Traditional Bangles</h3>
+<p>
+Delicate necklace with butterfly charms.
+</p>
 
-<p>Beautiful bangles for every occasion.</p>
+<div class="product-buttons">
 
-<div class="price">₹299</div>
-
-<a class="order-btn"
-href="https://wa.me/919999999999?text=Hello%20Sadguru%20Shop,%20I%20want%20to%20order%20Traditional%20Bangles."
+<a class="product-btn whatsapp"
+href="https://wa.me/919667486365"
 target="_blank">
-Order on WhatsApp
+WhatsApp
 </a>
+
+<a class="product-btn"
+href="tel:9767486365">
+Call
+</a>
+
+</div>
 
 </div>
 </div>
 
 
 <!-- PRODUCT 6 -->
-<div class="product" data-name="face wash" data-category="Beauty">
 
-<img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=700&q=80">
+<div class="product" data-category="Bangles">
+
+<img src="images/product-6.jpg"
+alt="Stone Bangles">
 
 <div class="product-info">
 
-<div class="category-name">Beauty</div>
+<h3>Stone Bangles</h3>
 
-<h3>Face Wash</h3>
+<p>
+Colourful stone-work bangle designs.
+</p>
 
-<p>Daily skincare face wash.</p>
+<div class="product-buttons">
 
-<div class="price">₹149</div>
-
-<a class="order-btn"
-href="https://wa.me/919999999999?text=Hello%20Sadguru%20Shop,%20I%20want%20to%20order%20Face%20Wash."
+<a class="product-btn whatsapp"
+href="https://wa.me/919667486365"
 target="_blank">
-Order on WhatsApp
+WhatsApp
 </a>
+
+<a class="product-btn"
+href="tel:9767486365">
+Call
+</a>
+
+</div>
 
 </div>
 </div>
 
 
 <!-- PRODUCT 7 -->
-<div class="product" data-name="beauty accessories" data-category="Beauty">
 
-<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=700&q=80">
+<div class="product" data-category="Bangles">
+
+<img src="images/product-7.jpg"
+alt="Traditional Bangles">
 
 <div class="product-info">
 
-<div class="category-name">Beauty</div>
+<h3>Traditional Bangles</h3>
 
-<h3>Beauty Accessories</h3>
+<p>
+Traditional designs with colourful stones.
+</p>
 
-<p>Useful beauty accessories collection.</p>
+<div class="product-buttons">
 
-<div class="price">₹199</div>
-
-<a class="order-btn"
-href="https://wa.me/919999999999?text=Hello%20Sadguru%20Shop,%20I%20want%20to%20order%20Beauty%20Accessories."
+<a class="product-btn whatsapp"
+href="https://wa.me/919667486365"
 target="_blank">
-Order on WhatsApp
+WhatsApp
 </a>
+
+<a class="product-btn"
+href="tel:9767486365">
+Call
+</a>
+
+</div>
 
 </div>
 </div>
 
 
 <!-- PRODUCT 8 -->
-<div class="product" data-name="gift set" data-category="Jewellery">
 
-<img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=700&q=80">
+<div class="product" data-category="Jewellery">
+
+<img src="images/product-8.jpg"
+alt="Fashion Jewellery">
 
 <div class="product-info">
 
-<div class="category-name">Jewellery</div>
+<h3>Fashion Jewellery</h3>
 
-<h3>Special Gift Set</h3>
+<p>
+Fancy jewellery for parties and functions.
+</p>
 
-<p>A beautiful gifting option.</p>
+<div class="product-buttons">
 
-<div class="price">₹599</div>
-
-<a class="order-btn"
-href="https://wa.me/919999999999?text=Hello%20Sadguru%20Shop,%20I%20want%20to%20order%20Special%20Gift%20Set."
+<a class="product-btn whatsapp"
+href="https://wa.me/919667486365"
 target="_blank">
-Order on WhatsApp
+WhatsApp
+</a>
+
+<a class="product-btn"
+href="tel:9767486365">
+Call
 </a>
 
 </div>
+
+</div>
 </div>
 
 
+<!-- PRODUCT 9 -->
+
+<div class="product" data-category="Bracelets">
+
+<img src="images/product-9.jpg"
+alt="Fashion Collection">
+
+<div class="product-info">
+
+<h3>Fashion Collection</h3>
+
+<p>
+Trendy designs for a modern look.
+</p>
+
+<div class="product-buttons">
+
+<a class="product-btn whatsapp"
+href="https://wa.me/919667486365"
+target="_blank">
+WhatsApp
+</a>
+
+<a class="product-btn"
+href="tel:9767486365">
+Call
+</a>
+
 </div>
-</section>
 
-
-<!-- FEATURES -->
-<section>
-
-<div class="section-title">
-<h2>Why Choose Sadguru Shop?</h2>
+</div>
 </div>
 
-<div class="features">
 
-<div class="feature">
-<div class="feature-icon">⭐</div>
-<h3>Quality Products</h3>
-<p>Selected products with good quality.</p>
+<!-- PRODUCT 10 -->
+
+<div class="product" data-category="Bangles">
+
+<img src="images/product-10.jpg"
+alt="Premium Bangle Collection">
+
+<div class="product-info">
+
+<h3>Premium Bangle Collection</h3>
+
+<p>
+Statement designs for festive occasions.
+</p>
+
+<div class="product-buttons">
+
+<a class="product-btn whatsapp"
+href="https://wa.me/919667486365"
+target="_blank">
+WhatsApp
+</a>
+
+<a class="product-btn"
+href="tel:9767486365">
+Call
+</a>
+
 </div>
 
-<div class="feature">
-<div class="feature-icon">💰</div>
-<h3>Best Prices</h3>
-<p>Affordable prices for everyone.</p>
+</div>
 </div>
 
-<div class="feature">
-<div class="feature-icon">📱</div>
-<h3>Easy Ordering</h3>
-<p>Order easily through WhatsApp.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">❤️</div>
-<h3>Customer Service</h3>
-<p>We value every customer.</p>
-</div>
 
 </div>
 
@@ -763,23 +965,87 @@ Order on WhatsApp
 <!-- ABOUT -->
 <section class="about" id="about">
 
-<div class="section-title">
-<h2>About Sadguru Shop</h2>
-</div>
+<div class="about-inner">
 
-<div class="about-box">
+<div class="about-grid">
+
+<div>
+
+<span class="badge">
+ABOUT SADGURU SHOP
+</span>
+
+<h2>
+Style for every occasion.
+</h2>
 
 <p>
-Welcome to <b>Sadguru Shop</b>.
-
-We offer a variety of products including
-fashion jewellery, earrings, bracelets, bangles,
-cutlery sets, face wash, beauty accessories and more.
-
-Our goal is to provide useful and stylish products
-at reasonable prices with friendly customer service.
-
+Sadguru Shop offers jewellery, earrings, bracelets,
+bangles, facewash and other fashion and beauty products.
+Explore our collection and contact us for product
+availability and current prices.
 </p>
+
+</div>
+
+
+<div class="info-box">
+
+<div class="info-row">
+
+<strong>📍 Shop Location</strong>
+
+<br>
+
+Ashoknagar Bhaji Market,
+Nagre Chowk,
+Behind Kadam Jewellers
+
+</div>
+
+
+<div class="info-row">
+
+<strong>📞 Call</strong>
+
+<br>
+
+<a href="tel:9767486365">
+9767486365
+</a>
+
+<br>
+
+<a href="tel:9665029894">
+9665029894
+</a>
+
+</div>
+
+
+<div class="info-row">
+
+<strong>💬 WhatsApp</strong>
+
+<br>
+
+<a href="https://wa.me/919667486365"
+target="_blank">
+9767486365
+</a>
+
+<br>
+
+<a href="https://wa.me/919665029894"
+target="_blank">
+9665029894
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -787,38 +1053,93 @@ at reasonable prices with friendly customer service.
 
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<section class="section contact" id="contact">
 
-<div class="section-title">
-<h2>Contact Us</h2>
-<p>We would love to hear from you</p>
+<div class="title">
+
+<span>GET IN TOUCH</span>
+
+<h2>Visit or Contact Us</h2>
+
+<p>
+For product photos, prices and availability,
+message us on WhatsApp or call.
+</p>
+
 </div>
 
-<div class="contact-box">
 
-<div class="contact-item">
-📞 Phone:
-<a href="tel:+919999999999">+91 99999 99999</a>
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
+📍
 </div>
 
-<div class="contact-item">
-💬 WhatsApp:
-<a href="https://wa.me/919999999999" target="_blank">
-Chat With Us
+<h3>Shop Location</h3>
+
+<p>
+Ashoknagar Bhaji Market<br>
+Nagre Chowk<br>
+Behind Kadam Jewellers
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="contact-icon">
+💬
+</div>
+
+<h3>WhatsApp</h3>
+
+<p>
+
+<a href="https://wa.me/919667486365"
+target="_blank">
+9767486365
 </a>
-</div>
 
-<div class="contact-item">
-📸 Instagram:
-<a href="https://instagram.com/" target="_blank">
-@SadguruShop
+<br>
+
+<a href="https://wa.me/919665029894"
+target="_blank">
+9665029894
 </a>
+
+</p>
+
 </div>
 
-<div class="contact-item">
-📍 Address:
-Your Shop Address, Maharashtra
+
+<div class="contact-card">
+
+<div class="contact-icon">
+📞
 </div>
+
+<h3>Call Us</h3>
+
+<p>
+
+<a href="tel:9767486365">
+9767486365
+</a>
+
+<br>
+
+<a href="tel:9665029894">
+9665029894
+</a>
+
+</p>
+
+</div>
+
 
 </div>
 
@@ -828,85 +1149,61 @@ Your Shop Address, Maharashtra
 <!-- FOOTER -->
 <footer>
 
-<h2>Sadguru Shop</h2>
-
 <p>
-Jewellery • Accessories • Beauty • Cutlery
+© <span id="year"></span> Sadguru Shop. All Rights Reserved.
 </p>
 
-<div class="social">
-
-<a href="#home">Home</a> |
-<a href="#products">Products</a> |
-<a href="#contact">Contact</a>
-
-</div>
-
-<p>
-© 2026 Sadguru Shop. All Rights Reserved.
+<p style="font-size:13px;margin-top:5px;">
+Jewellery • Earrings • Bracelets • Bangles • Facewash & Beauty
 </p>
 
 </footer>
 
 
-<!-- FLOATING WHATSAPP -->
-<a class="whatsapp"
-href="https://wa.me/919999999999"
-target="_blank"
-title="WhatsApp">
+<!-- FLOATING BUTTONS -->
+
+<div class="floating">
+
+<a class="float-btn float-wa"
+href="https://wa.me/919667486365"
+target="_blank">
 💬
 </a>
+
+<a class="float-btn float-call"
+href="tel:9767486365">
+☎
+</a>
+
+</div>
 
 
 <script>
 
-/* SEARCH PRODUCTS */
+function openMenu(){
 
-function searchProducts(){
-
-    let input =
-    document.getElementById("searchInput")
-    .value.toLowerCase();
-
-    let products =
-    document.querySelectorAll(".product");
-
-    products.forEach(function(product){
-
-        let name =
-        product.getAttribute("data-name")
-        .toLowerCase();
-
-        let category =
-        product.getAttribute("data-category")
-        .toLowerCase();
-
-        if(name.includes(input) || category.includes(input)){
-            product.style.display = "block";
-        }
-        else{
-            product.style.display = "none";
-        }
-
-    });
+    document
+    .getElementById("navLinks")
+    .classList.toggle("show");
 
 }
 
 
-/* CATEGORY FILTER */
-
 function filterProducts(category){
 
-    let products =
+    const products =
     document.querySelectorAll(".product");
 
     products.forEach(function(product){
 
-        if(product.getAttribute("data-category") === category){
+        if(product.dataset.category === category){
+
             product.style.display = "block";
-        }
-        else{
+
+        }else{
+
             product.style.display = "none";
+
         }
 
     });
@@ -918,6 +1215,10 @@ function filterProducts(category){
     });
 
 }
+
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
 
 </script>
 
